@@ -82,7 +82,7 @@ class RampLab(commands.Cog):
                 area = round(((time[-1]-x)*(time[-1]-time[0]))/2)
             
             embed.add_field(name = "Equation of Line of best fit", value = "y = " + str(round(m,2)) + "x + " + str(round(b,2)))
-            embed.add_field(name = "Area Under the Curve", value = str(round(area, 2)), inline = False)
+            embed.add_field(name = "Area Under the Curve", value = str(round(area, 2)) + "cm [fwd]", inline = False)
             errorP = abs(((area - position[-1])/position[-1])*100)
             embed.add_field(name = "Error Percent", value = str(round(errorP, 2)) + "%", inline = False)
             await ctx.send(embed=embed, file=discord.File("graph.png"))
