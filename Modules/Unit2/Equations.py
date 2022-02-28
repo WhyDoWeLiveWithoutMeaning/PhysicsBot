@@ -52,6 +52,7 @@ class Equation(commands.Cog):
         embed.add_field(name="Acceleration", value=f"{a} m/s^2", inline=False)
         embed.add_field(name="Time", value=f"{t} s", inline=False)
         embed.add_field(name="Displacement", value=f"{d} m", inline=False)
+        embed.set_footer(text="Final Answers are not to exact Significant Figures.")
         await ctx.respond(embed=embed)
         
 
