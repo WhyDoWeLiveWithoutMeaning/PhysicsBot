@@ -24,6 +24,7 @@ class Equation(commands.Cog):
             a: Option(float, "Acceleration in m/s^2", required=False) = None,
             t: Option(float, "Time in s", required=False) = None,
             ):
+        #V1, v2, d, a, t
         if v1 and a and t:
             v2 = v1 + a*t
             d = v1*t + 0.5*a*t**2
@@ -42,6 +43,9 @@ class Equation(commands.Cog):
         elif v1 and v2 and t:
             a = (v2 - v1)/t
             d = v1*t + 0.5*a*t**2
+        elif t and d and v2:
+            v1 = v2 - a*t
+            a = (v2 - v1)/t
         embed = discord.Embed(title="Uniform Equation", description="", color=0x00ff00)
         embed.add_field(name="Initial Velocity", value=f"{v1} m/s", inline=False)
         embed.add_field(name="Final Velocity", value=f"{v2} m/s", inline=False)
