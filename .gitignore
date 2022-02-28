@@ -1,2 +1,3 @@
 HIDDEN.py
 *.png
+__pycache__
