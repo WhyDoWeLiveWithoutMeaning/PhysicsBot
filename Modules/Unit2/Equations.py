@@ -46,6 +46,9 @@ class Equation(commands.Cog):
         elif t and d and v2:
             v1 = (2*d) / t
             a = (v2 - v1)/t
+        elif v2 and a and d:
+            v1 = (2*d) / (a + t)
+            t = (v2 - v1)/a
         embed = discord.Embed(title="Uniform Equation", description="", color=0x00ff00)
         embed.add_field(name="Initial Velocity", value=f"{v1} m/s", inline=False)
         embed.add_field(name="Final Velocity", value=f"{v2} m/s", inline=False)

@@ -12,7 +12,7 @@ client = commands.Bot(command_prefix='!', case_insensitive=True, intents=intents
 ## BOT EVENTS
 @client.event
 async def on_ready():
-    print("Online")
+    print("Online") 
 
 ## Load All Cogs
 for file1 in os.listdir("."): # Loop through all files in the current directory

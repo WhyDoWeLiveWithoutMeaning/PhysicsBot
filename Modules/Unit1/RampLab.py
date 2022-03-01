@@ -58,6 +58,7 @@ class RampLab(commands.Cog):
             g = [m for _ in range(0, 16, 1)]
 
             fig[2].grid(True, 'both')
+            
             fig[2].set_ylim(0, 80)
             fig[2].set_xlabel('Time (s)')
             fig[2].set_ylabel('Acceleration (m/s^2) [fwd]')
